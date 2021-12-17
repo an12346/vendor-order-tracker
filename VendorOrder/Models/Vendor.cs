@@ -31,12 +31,17 @@ namespace VendorOrder.Models
 
     public static Vendor Find(int searchId)
     {
-      return _instances[searchId-1];
+      return _instances[searchId];
     }
 
     public static List<Vendor> GetAll()
     { 
       return _instances;
+    }
+
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
     }
 
   }

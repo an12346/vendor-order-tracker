@@ -8,8 +8,8 @@ namespace VendorOrder.Models
   {
    public string Title { get; set; }
     public string Description { get; set; }
-    int Price { get; set; }
-    string Date {get; set; }
+    public int Price { get; set; }
+    public string Date {get; set; }
     public int Id { get; }
 
     private static List<Order> _instances = new List<Order> {};
@@ -31,7 +31,7 @@ namespace VendorOrder.Models
 
     public static Order Find(int searchId)
     {
-      return _instances[searchId-1];
+      return _instances[searchId];
     }
 
     public static void ClearAll()
