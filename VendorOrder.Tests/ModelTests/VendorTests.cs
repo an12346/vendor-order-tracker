@@ -46,7 +46,7 @@ namespace VendorOrder.Tests
       string description = "Bakery";
       Vendor  newVendor = new Vendor(name, description);
       int output = newVendor.Id;
-      Assert.AreEqual(1, output);
+      Assert.AreEqual(0, output);
     }
     
   }
