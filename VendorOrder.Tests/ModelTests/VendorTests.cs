@@ -48,6 +48,17 @@ namespace VendorOrder.Tests
       int output = newVendor.Id;
       Assert.AreEqual(0, output);
     }
+
+    [TestMethod]
+    public void FindVendor_ReturnsAVendor_Vendor()
+    {
+      string name1 = "Susie's Bakery";
+      string name2 = "Test Bakery";
+      Vendor newVendor1 = new Vendor(name1, "Bakery");
+      Vendor newVendor2 = new Vendor(name2, "Bakery");
+      Vendor output = Vendor.Find(1);
+      Assert.AreEqual(newVendor1, output);
+    }
     
   }
 }
