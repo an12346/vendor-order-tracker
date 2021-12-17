@@ -24,6 +24,17 @@ namespace VendorOrder.Tests
       Assert.AreEqual(name, output);
     }
 
+
+    [TestMethod]
+    public void GetDescriptionOfVendor_ReturnsDescriptionOfVendor_String()
+    {
+      string description = "Bakery";
+      Vendor newVendor = new Vendor("Susie's Bakery", description);
+      string output = newVendor.Description;
+      Assert.AreEqual(description, output);
+    }
+    
+
     
   }
 }
