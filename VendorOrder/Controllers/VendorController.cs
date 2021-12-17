@@ -9,6 +9,7 @@ namespace VendorOrder.Controllers
     public ActionResult Index()
     {
       List<Vendor> allVendors = Vendor.GetAll();
+      return View(allVendors);
     }
 
   }

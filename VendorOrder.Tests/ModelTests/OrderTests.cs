@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+/*using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendorOrder.Models;
 
 namespace VendorOrder.Tests
@@ -18,4 +18,4 @@ namespace VendorOrder.Tests
       Assert.AreEqual(newOrder, Order.GetAll());
     }
   }
-}
+}*/

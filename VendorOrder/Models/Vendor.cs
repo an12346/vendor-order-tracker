@@ -17,7 +17,11 @@ namespace VendorOrder.Models
     {
       Name = name;
       Description = description;
+      Orders = new List<Order>{};
+      _instances.Add(this);
     }
+
+
   }
 
 }
