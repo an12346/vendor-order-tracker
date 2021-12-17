@@ -34,6 +34,11 @@ namespace VendorOrder.Models
       return _instances[searchId-1];
     }
 
+    public static List<Vendor> GetAll()
+    { 
+      return _instances;
+    }
+
   }
 
 }

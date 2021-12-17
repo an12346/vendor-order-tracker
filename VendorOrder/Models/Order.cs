@@ -1,15 +1,16 @@
 using System.Collections.Generic;
-using System;
+
 
 namespace VendorOrder.Models 
 {
 
   public class Order
   {
-    string Title { get; set; }
-    string Description { get; set; }
+   public string Title { get; set; }
+    public string Description { get; set; }
     int Price { get; set; }
     string Date {get; set; }
+    public int Id { get; }
 
     private static List<Order> _instances = new List<Order> {};
 
@@ -19,12 +20,18 @@ namespace VendorOrder.Models
       Description = description;
       Price = price;
       Date = date;
+      Id = _instances.Count;
       _instances.Add(this);
     }
 
     public static List<Order> GetAll()
     { 
       return _instances;
+    }
+
+    public static Order Find(int searchId)
+    {
+      return _instances[searchId-1];
     }
 
     public static void ClearAll()
