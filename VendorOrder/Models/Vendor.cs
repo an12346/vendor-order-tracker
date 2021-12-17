@@ -1,5 +1,5 @@
-/*using System.Collections.Generic;
-using System;
+using System.Collections.Generic;
+
 
 namespace VendorOrder.Models
 {
@@ -9,7 +9,9 @@ namespace VendorOrder.Models
 
     public string Description { get; set; }
 
-    private static List<Order> _instances = new List<Order>
+    public List<Order> Orders { get; set; }
+
+    private static List<Vendor> _instances = new List<Vendor> {};
 
     public Vendor(string name, string description)
     {
@@ -23,5 +25,5 @@ namespace VendorOrder.Models
 //Create vendor class 
   //-vendor's name
   //-description of vendor 
-  //-list of orders -- connected to Order class*/
+  //-list of orders -- connected to Order class
 
