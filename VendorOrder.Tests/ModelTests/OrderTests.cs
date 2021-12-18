@@ -1,21 +1,21 @@
-/*using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendorOrder.Models;
+using System.Collections.Generic;
+using System;
+
 
 namespace VendorOrder.Tests
 {
-  [TestClass]
-  public class OrderTests
-  {
 
+[TestClass]
+public class OrderTests
+  {
+  
     [TestMethod]
-    public void GetAll_WillReturnInstanceOfOrder_Order()
+    public void OrderConstructor_CreatesInstancesOfOrder_Order()
     {
-      string orderFor = "Susie's Bakery";
-      string description = "Pastry";
-      int price = 5;
-      string date = "Monday";
-      Order newOrder = new Order(orderFor, description, price, date);
-      Assert.AreEqual(newOrder, Order.GetAll());
+      Order newOrder = new Order("Susie's Bakery", "pastry", 10, "monday");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
   }
-}*/
+}
